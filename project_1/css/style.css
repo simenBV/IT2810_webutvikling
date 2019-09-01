@@ -1,0 +1,10 @@
+.wrap {
+    display: grid;
+    grid-template-columns: auto 3fr;
+}
+
+
+h1, p {
+    color: red;
+    text-align: center;
+}
