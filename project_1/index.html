@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <div class="wrap">
-            <title>Page Title</title>
-        </div>
+        <title>Prosjekt 1 - Mitt abstrakte bilde</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+
     </head>
     <body>
-        <link rel="stylesheet" href="./css/style.css">
-        <div class="wrap">
-            <h1>This is a Heading</h1>
-            <p>This is a paragraph.</p>
+
+        <div class="wrapper">
+            <!-- Title -->
+            <div id="main-header">
+                <h1>Abstrakte bilder</h1>
+            </div>
+
+            <div id="aboutContainer">
+                <div id="buttonContainer1" class="buttonContainer"><button  class="btnTextToggle" id="btnAboutTextToggle" >Vis om kunstneren</button></div>
+                <div class=paragraph id=p1>
+                    <h2>Ab Straktus</h2>
+
+                    <p>
+                        <i>Ab Straktus</i> er en helt ny kunstner innen den abstrakte kunstart. Han har spesialisert seg innen abstrakte interaktive kunnstverk. Hovedinteresse til <i>Straktus</i> er å kombinere ulike enkle geometriske figurer for å lage et unikt kunstverk. <i>Straktus</i> sin visjon er at kunst ikke er noe en bare skal se på, men også kunne være interaktiv. Han ønsker at verket skal være slik at observatøren selv tar del i kunstverket.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Content -->
+            <div id="picture-frame1" class= "nested right">
+                <!--bilde-->
+                <div id="ramme1">
+                    <svg id="image1" viewBox="0 0 250 250">
+                        <rect rx="15" ry="15" x="25" y="25" height="200" width="200" fill="lightblue" />
+                        <polygon id="poly" fill="pink" points="50,50 125,125 200,50 200, 200 125,125 50,200" />
+                        <line id="line" x1="25" y1="125" x2="225" y2="125" stroke="blue" stroke-width="5" />
+                        <line id="line" x1="125" y1="25" x2="125" y2="225" stroke="blue" stroke-width="5" />
+                        <polygon id="poly1" fill="red" opacity="0.5" points="125,50 200,125 125,200 50,125 " />
+                        <circle r="100" cx="125" cy="125" fill="none" stroke="red" stroke-width="10px"/>
+                        <circle r="10" cx="125" cy="125" fill="yellow"/>
+                    </svg>
+                </div>
+                <!--info-->
+                <div id="info1">
+                    <h2 class=info-text>Ville vesten </h2>
+                    <h4><i>Klikk på kunstverket for å spinne</i></h4>
+                </div>
+            </div>
+
+
+            <div id="picture-frame2" class= "nested left">
+                <!--infp-->
+                <div id="info2">
+                    <h2 class=info-text> Kjedekollisjon </h2>
+                    <h4><i>Klikk på kunstverket for å endre retting</i></h4>
+                </div>
+                <!--bilde-->
+                <div>
+                    <canvas id="image2"></canvas>
+                    <script src="canvas.js"></script>
+                </div>
+            </div>
+            <div id="documentContainer">
+                <div id="buttonContainer2" class="buttonContainer"><button class="btnTextToggle" id=btnDocTextToggle>Vis dokumentasjon</button></div>
+                <div class=paragraph id=p2>
+                    <p>
+                    duis pariatur summis consequat quorum voluptatibus singulis velit officia
+                    praesentibus expetendis quid instituendarum fabulas illum incurreret
+                    efflorescere tamen excepteur mandaremus probant esse te duis singulis sed enim
+                    fabulas imitarentur sint velit nescius consequat distinguantur quae aut
+                    transferrem tamen ullamco veniam
+                    </p>
+                </div>
+            </div>
+
         </div>
     </body>
 </html>

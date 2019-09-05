@@ -1,0 +1,2 @@
+<rect rx="15" ry="15" x="25" y="25" height="200" width="200" fill="lightblue" />
+<polygon class="poly" fill="pink" points="50,50 125,125 200,50 200, 200 125,125 50,200" />
