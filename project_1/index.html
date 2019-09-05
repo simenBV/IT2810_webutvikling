@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Prosjekt 1 - Mitt abstrakte bilde</title>
+        <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script type="text/javascript" src="main.js"></script>
@@ -21,7 +22,7 @@
                     <h2>Ab Straktus</h2>
 
                     <p>
-                        <i>Ab Straktus</i> er en helt ny kunstner innen den abstrakte kunstart. Han har spesialisert seg innen abstrakte interaktive kunnstverk. Hovedinteresse til <i>Straktus</i> er å kombinere ulike enkle geometriske figurer for å lage et unikt kunstverk. <i>Straktus</i> sin visjon er at kunst ikke er noe en bare skal se på, men også kunne være interaktiv. Han ønsker at verket skal være slik at observatøren selv tar del i kunstverket.
+                        <i>Ab Straktus</i> er en helt ny kunstner innen den abstrakte kunstart. Han har spesialisert seg innen abstrakte interaktive kunstverk. Hovedinteresse til <i>Straktus</i> er å kombinere ulike enkle geometriske figurer for å lage et unikt kunstverk. <i>Straktus</i> sin visjon er at kunst ikke er noe en bare skal se på, men også kunne være interaktiv. Han ønsker at verket skal være slik at observatøren selv tar del i kunstverket.
                     </p>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                 <!--infp-->
                 <div id="info2">
                     <h2 class=info-text> Kjedekollisjonen </h2>
-                    <h4><i>Klikk på kunstverket for å endre retting</i></h4>
+                    <h4><i>Klikk på kunstverket for å endre rettning</i></h4>
                 </div>
                 <!--bilde-->
                 <div>
@@ -64,13 +65,50 @@
             <div id="documentContainer">
                 <div id="buttonContainer2" class="buttonContainer"><button class="btnTextToggle" id=btnDocTextToggle>Vis dokumentasjon</button></div>
                 <div class=paragraph id=p2>
+                    <h3>Dokumentasjon</h3>
+                    <h4>Layout: CSS-grid</h4>
+
                     <p>
-                    duis pariatur summis consequat quorum voluptatibus singulis velit officia
-                    praesentibus expetendis quid instituendarum fabulas illum incurreret
-                    efflorescere tamen excepteur mandaremus probant esse te duis singulis sed enim
-                    fabulas imitarentur sint velit nescius consequat distinguantur quae aut
-                    transferrem tamen ullamco veniam
+                    For layout av side-elementene valgte jeg å bruke CSS-grid metode. Grunnen til at jeg valgte CSS-grid overfor Flexbox-layout var fordi jeg var klar på hvordan jeg ønsket layout av side-elementene skulle være og jeg ønsket et 2d grid. Jeg har brukt «nestede» grid for å få til ønsket layout. CSS-grid gir presis kontroll av posisjon og størrelse av elementene med et todimensjonalt grid. Dette var spesielt viktig for meg for å håndtere bildene og tilhørende tittel for å få et estetisk design. Flexbox gir større mulighet for elementer til å endre størrelse når beholderen til disse endres. Dette kan være ønskelig når dimensjonene ikke er så viktig, men for kunstverkene følte jeg det var viktig at de beholdt dimensjonene «kunstneren» hadde tenkt.
                     </p>
+
+                    <h4>HTML canvas og SVG i HTML </h4>
+                    <p>Kunstverket «Den ville vesten» består av hardkodete SVG-elementer. For animasjon av elementene har jeg brukt jQuery biblioteket for å sette en CSS transformasjon med en click event. jQuery forenkler en slik animasjon med at vi kan aksessere klasser direkte og så enkelt manipulere CSSen i stedet for å lage en funksjon med JavaScript.</p>
+
+                    <p>Kunstverket «Kjedekollisjonen» består elementer som er tegnet på et Canvas element ved bruk av JavaScript. For animasjon av de to sirklene brukes <i>window.requestAnimationFrame()</i> metoden og to funksjoner som gir sirkelkoordinater. Videre er mouseover og click interaktivitet implementert med JavaScript. Canvas kan ikke bli modifisert med CSS slik SVG kan. Dette gjør det noe mer komplekst å endre design på elementene i forhold til SVG elementene som enkelt kan manipuleres med CSS og jQuery. </p>
+
+                    <p>Hvis en ønsker å zoome inn på kunstverkene ser en at resolusjonen til SVG elementene forblir uendret siden de er i et vektor bildeformat. Dette er da ikke tilfelle med Canvas elementene som bruker bitmap bildeformat og skaleres derfor dårligere. </p>
+
+                    <h4>Cross-browser testing</h4>
+                    <p>Jeg har gjennomført enkel cross-browser testing med å se på funksjonalitet og oppførsel i webleserne Chrome versjon 76.0.3809.100 og Safari versjon 12.1.1. Jeg har i testene testet om funksjonalitet og oppførsel er i samsvar med koden min og om de er i samsvar på tvers av webleserne. Det jeg har sett på er design, de interaktive kunstverkene og knappefunksjonalitet oppfører seg slik ment i koden og om det er noe variasjon på tvers av webleserne. Etter min testing har jeg konkludert med at websiden har lik funksjonalitet og oppførsel på tvers av weblesere med unntak av fargen på knappene som er grå i Safari og hvit i Chrome. </p>
+
+                    <p>Jeg har også brukt Mozillas utvikler dokumentasjon «MDN Web Docs» som har informasjon om webleserkompatibilitet for ulike funksjoner, egenskaper og metoder for HTML, CSS og JavaScript for å passe på at disse er støttet for de ulike webleserne. </p>
+
+                    <h4>Viktigste informasjonskilder:</h4>
+                    <ul>
+                        <li>"youtube.com" og "pluralsight.com"
+                            <ul>
+                                <li>Forskjellige tutorials for HTML, CSS, CSS-grid, flexbox, jQuery, HTML5 canvas, SVG, JavaScript</li>
+                            </ul>
+
+                        </li>
+                        <li>"stackoverflow.com"
+                            <ul>
+                                <li>For info om lignende problemer jeg opplever</li>
+                            </ul>
+
+                        </li>
+                        <li>"developer.mozilla.org"
+                            <ul>
+                                <li>Browser compatibility</li>
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+
+
                 </div>
             </div>
 

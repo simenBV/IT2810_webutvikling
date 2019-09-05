@@ -6,7 +6,7 @@ $(document).ready(function(){
         var link = $(this);
         $('#p1').slideToggle(300, function() {
             if ($(this).is(':visible')) {
-                $('#btnAboutTextToggle').text('Lukk om kunstneren');
+                $('#btnAboutTextToggle').text('Skjul om kunstneren');
             }
                 else {
                 $('#btnAboutTextToggle').text('Vis om kunstneren');
@@ -18,7 +18,7 @@ $(document).ready(function(){
         var link = $(this);
         $('#p2').slideToggle(300, function() {
             if ($(this).is(':visible')) {
-                $('#btnDocTextToggle').text('Lukk dokumentasjon');
+                $('#btnDocTextToggle').text('Skjul dokumentasjon');
             }
             else {
              $('#btnDocTextToggle').text('Vis dokumentasjon');

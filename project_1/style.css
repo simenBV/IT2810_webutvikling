@@ -8,6 +8,8 @@ body{
 
 h2 {
     text-align: center;
+    outline-style:none;
+
 }
 
 p{
@@ -37,6 +39,7 @@ p{
     /*border:#333 1px solid;*/
     margin: 30px;
     padding: 1em;
+    user-select: none;
 }
 
 .picture{
@@ -84,6 +87,8 @@ p{
     font-size: 15px;
     letter-spacing: 0.25em;
     word-spacing: 1em;
+    margin-left: 200px;
+    margin-right: 200px;
 
     /*border: 2px solid red;*/
 
@@ -152,6 +157,8 @@ p{
     margin: 30px;
     margin-top: 75px;
     margin-bottom: 75px;
+    margin-left: 200px;
+    margin-right: 200px;
 
 }
 
